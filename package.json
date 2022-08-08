@@ -7,7 +7,7 @@
 	"main": "build/index.js",
 	"scripts": {
 		"build": "wp-scripts build",
-		"format": "wp-scripts format",
+		"format": "wp-scripts format && npx stylelint \"**/*.scss\" --fix",
 		"lint:css": "wp-scripts lint-style",
 		"lint:js": "wp-scripts lint-js",
 		"packages-update": "wp-scripts packages-update",
@@ -17,13 +17,13 @@
 	"prettier": "@wordpress/prettier-config",
 	"stylelint": {
 		"extends": "@wordpress/stylelint-config/scss"
-		
 	},
 	"devDependencies": {
 		"@wordpress/eslint-plugin": "^12.8.0",
 		"@wordpress/prettier-config": "^1.4.0",
 		"@wordpress/scripts": "^23.6.0",
 		"@wordpress/stylelint-config": "^20.0.2",
-		"eslint-config-prettier": "^8.5.0"
+		"eslint-config-prettier": "^8.5.0",
+		"stylelint": "^14.9.1"
 	}
 }
